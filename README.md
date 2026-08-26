@@ -1,6 +1,6 @@
-# Java_Practice !♨️👨‍💻
+# Java_Practice 
 
-Practicing Java concepts with code &amp; examples!
+Practicing Java concepts with code &amp; examples!♨️👨‍💻
 
 ## How to Run
 1. Clone the repository.
