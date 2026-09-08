@@ -1,0 +1,30 @@
+package Substring;
+
+import java.util.Scanner;
+
+public class substring {
+     static void main() {
+        Scanner sc = new Scanner(System.in);
+         System.out.println("Enter the string: ");
+         String str = sc.nextLine();
+         System.out.println("Enter the size of the substring: ");
+         int size = sc.nextInt(); //4
+         int length = str.length();
+
+
+
+         for(int i = 0; i<= length - size; i++){
+             String t = ""; // it will reset for each new string
+             for(int j = i; j < size+i; j++){
+                 char ch = str.charAt(j);
+                  t = t +ch;
+
+
+             }
+             System.out.println(t);
+         }
+
+
+    }
+
+}
