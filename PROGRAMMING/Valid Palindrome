@@ -1,0 +1,39 @@
+class Solution {
+    public boolean isPalindrome(String s) {
+       
+        // 1. Initialize pointers at the absolute boundaries
+        int left = 0;
+        int right = s.length() - 1;
+        
+        // 2. Shrink inward until the pointers meet in the middle
+        while (left < right) {
+            
+            // Skip characters from the left if they are not letters or numbers
+            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
+                left++; 
+            }
+            
+            // Skip characters from the right if they are not letters or numbers
+            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
+                right--;
+            }
+            
+            // Compare characters ignoring case
+            char leftChar = Character.toLowerCase(s.charAt(left));
+            char rightChar = Character.toLowerCase(s.charAt(right));
+            
+            if (leftChar != rightChar) {
+                return false; // Found a mismatch, not a palindrome
+            }
+            
+            // Move pointers closer to each other
+            left++;
+            right--;
+        }
+        
+        return true; // Whole string successfully verified
+    }
+}
+
+        
+    
